@@ -12,13 +12,23 @@
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
           <style>
-
+.registerbtn {
+  background-color: #404240;
+  color: white;
+  width: 100%;
+  opacity: 0.9;
+  position: absolute;
+  bottom:0;
+  left:20px;
+  
+  
+}
             body {
               
-              margin-bottom: 100px;
+              margin-bottom: 10px;
               margin-right: 150px;
               margin-left: 80px;
-              margin-top:100px;
+              margin-top:10px;
             }
             @media screen and (max-width:768px) {
 img {
@@ -34,12 +44,73 @@ img {
     margin:0;
 }
 }
-            
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:20px; 
+   left:50%;  /* Height of the footer */
+}          
                 </style>
         </head>
     
       <body>
+        <div id="google_translate_element"></div>
+
+        <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         <div class="row">
+          <div class="col-md-3">
+            <div class="card card-inverse card-primary text-center">
+                <img src="../static/driver.jpg" class="card-img-top" alt="placeholder 960">
+                <div class="card-body">
+                  <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                  <p> Description:Driver needed</p> 
+                  <p>Vacancy: 3</p> 
+                  <p>Salary: 13000</p> 
+                  <p>Date: 13/11/2020</p>
+                </div>
+            </div></div>
+
+            <div class="col-md-3">
+              <div class="card card-inverse card-primary text-center">
+                  <img src="../static/waiter.jpg" class="card-img-top" alt="placeholder 960">
+                  <div class="card-body">
+                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                    <p> Description:Waiter needed</p> 
+                    <p>Vacancy: 4</p> 
+                    <p>Salary: 9000</p> 
+                    <p>Date: 15/12/2021</p>
+                  </div>
+              </div></div>
+
+              <div class="col-md-3">
+                <div class="card card-inverse card-primary text-center">
+                    <img src="../static/barber2.jpeg" class="card-img-top" alt="placeholder 960">
+                    <div class="card-body">
+                      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                      <p> Description: Stylist needed</p> 
+                      <p>Vacancy: 3</p> 
+                      <p>Salary: 6000</p> 
+                      <p>Date: 14/02/2021</p>
+                    </div>
+                </div></div>
+
+                <div class="col-md-3">
+                  <div class="card card-inverse card-primary text-center">
+                      <img src="../static/carpenter.jpg" class="card-img-top" alt="placeholder 960">
+                      <div class="card-body">
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                        <p> Description: Need to build cabinets</p> 
+                        <p>Vacancy: 3</p> 
+                        <p>Salary: 16000</p> 
+                        <p>Date: 14/02/2021</p>
+                      </div>
+                  </div></div>
             {% for task_id in tasks %}
             <div class="col-md-3">
                 <div class="card card-inverse card-primary text-center">
@@ -54,5 +125,12 @@ img {
                 </div></div>
                 {% endfor %}
             </div>
+            <div>
+            </div>
+                <form action="/train" method="POST"> 
+                    <button type="submit" class="registerbtn" name="train" value="train" >Want to get trained better? Try out our tutorials</button>
+                    </form>
+               
+
           </body>
           </html>

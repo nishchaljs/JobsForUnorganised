@@ -6,9 +6,8 @@
 <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: black;
+  
 }
-
 * {
   box-sizing: border-box;
 }
@@ -46,8 +45,8 @@ hr {
 
 /* Set a style for the submit button */
 .registerbtn {
-  background-color: #4CAF50;
-  color: white;
+  background-color: #2e302e;
+  color:rgb(255, 255, 255);
   padding: 16px 20px;
   margin: 8px 0;
   border: none;
@@ -81,13 +80,22 @@ html {
    position:absolute;
    bottom:0;
    width:100%;
-   height:60px;   /* Height of the footer */
-   background:#4CAF50;
+   height:20px; 
+   left:50%;  /* Height of the footer */
 }
 </style>
 </head>
 <body>
-<form action="/test" method="POST">
+  <div id="google_translate_element"></div>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <form action="/test" method="POST">
   <div class="container">
     <h1>Register</h1>
     <p>Please fill in this form to get notified about job opportunities</p>
@@ -149,6 +157,12 @@ html {
 
   
 </form>
+<div class="container">
+<form action="/seejobs2" method="POST"> 
+<button type="submit" class="registerbtn" name="seejobs2" value="Seejobs2" >See Available Jobs </button>
+</form>
+
+</div>
 <div id="footer">
   <h3> Try out the bot to ensure a more healthy and safe work environment</h3>
 </div>

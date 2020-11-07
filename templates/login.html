@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
+    <link rel="stylesheet" href="static/news_scroll.css" type="text/css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -17,7 +17,49 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
     <style>
-       
+      /* #google_translate_element{
+        position:absolute;
+        top:10px;
+        left:25%;
+      } */
+      *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  font-family:'tahoma', serif;
+}
+.container{
+  width:75%;
+  margin:20px auto;
+  height:300px;
+  background-color:#333;
+  overflow:hidden;
+}
+ul{
+  list-style:none;
+  position:relative;
+}
+li{
+  height:100px;
+  background-color:rgba(57, 173, 117,0.3);
+   text-align:center;
+  border-bottom:1px solid #333;
+}
+h2{
+  color:#fff;
+  padding-top:10px;
+}
+p{
+  text-align:left;
+  padding:10px;
+  color:#eee;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+ }
+
       .carousel-caption{  
       text-align: center;  
       width: 300px;  
@@ -47,12 +89,28 @@
     
      
 </head>
+<body>
+  
 
+    
  <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+
   <div class="carousel-inner">
     
+      
     <div class="carousel-caption">
-      <form action="/employer" method="post">
+      <div id="google_translate_element"> </div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+      }
+      </script>
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </br>
+  </br>
+</br>
+    
+    <form action="/employer" method="post">
       <button type="submit" name="employer" value="employer" class="btn btn-dark" id="btn" >EMPLOYER</button></a>
     </form>
     </br>
@@ -62,6 +120,7 @@
       <button type="submit" name="employee" value="Employee" class="btn btn-dark" id="btn" >EMPLOYEE</button></a>
     </form>
     </div>
+    
      
   
     <div class="carousel-item active" data-interval="50">
@@ -91,7 +150,7 @@
 
 
   
-     
+    
     
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
