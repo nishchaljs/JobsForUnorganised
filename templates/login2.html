@@ -12,7 +12,31 @@
 
 </head>
 <style>
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
 
+.card{
+height: 70%;
+margin-top: auto;
+margin-bottom: auto;
+width: 70%;
+background-color: rgba(0,0,0,0.6) !important;
+}
+
+
+      }
+  
+      
+      /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .card{
+height: 80%;
+margin-top: auto;
+margin-bottom: auto;
+width: 80%;
+background-color: rgba(0,0,0,0.6) !important;
+}
+      }
 #signup{
 	left:50%;
 }
