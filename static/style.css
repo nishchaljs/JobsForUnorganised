@@ -1,0 +1,88 @@
+* {
+  			box-sizing: border-box;
+         }
+
+         h3{
+
+         	width:30%;
+         	border-left: 2px solid black;
+         	border-bottom: 2px solid black;
+         	height: 30px;
+         	text-align: center;
+         	margin: 0px;
+         	float: right;
+
+         }
+
+
+         div{
+         	background-color: grey;
+         	padding-top: 0px;
+         	margin: 1%;
+         	border: 2px solid black;
+         }
+
+
+
+         p{
+         	clear: right;
+         	padding: 20px;
+         	text-align: justify;
+         	font-family: "Courier New";
+         }
+
+         h1{
+         	text-align: center;
+         }
+
+         #Restaurants{
+         	background-color: pink;
+         	
+         	         }
+
+         #Construction{
+         	background-color: orange;
+         	         }
+
+         #HouseHold{
+         	background-color: yellow;
+         	         	         }
+
+         #Others{
+            background-color: yellow;
+                                 }
+
+		
+		@media (min-width: 992px){
+
+
+         div{
+         	float: left;
+         	width: 31%;
+         }
+
+		}
+
+		@media (min-width: 768px) and (max-width: 991px){
+			.ch{
+			
+         	float: left;
+         	width: 48%;
+         	
+			}
+
+			.be{
+
+			
+         	float: left;
+         	width: 48%;
+
+			}
+
+			.su{
+
+		
+         	clear: left;
+         	
+			}
+		}

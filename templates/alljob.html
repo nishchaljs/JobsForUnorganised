@@ -1,0 +1,58 @@
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+          <style>
+
+            body {
+              
+              margin-bottom: 100px;
+              margin-right: 150px;
+              margin-left: 80px;
+              margin-top:100px;
+            }
+            @media screen and (max-width:768px) {
+img {
+    width:100%;
+}
+.container {
+    max-width:100%;
+    width: 100%;
+}
+.col-md-3{
+    width:100%;
+    float:left;
+    margin:0;
+}
+}
+            
+                </style>
+        </head>
+    
+      <body>
+        <div class="row">
+            {% for task_id in tasks %}
+            <div class="col-md-3">
+                <div class="card card-inverse card-primary text-center">
+                    <img src="../static/housd.jpg" class="card-img-top" alt="placeholder 960">
+                    <div class="card-body">
+                      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                      <p> Description:{{task_id.desc}}</p> 
+                      <p>Vacancy: {{task_id.vac}}</p> 
+                      <p>Salary: {{task_id.sal}}</p> 
+                      <p>Date: {{task_id.date}}</p>
+                    </div>
+                </div></div>
+                {% endfor %}
+            </div>
+          </body>
+          </html>
