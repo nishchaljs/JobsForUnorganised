@@ -61,6 +61,8 @@ p{
   white-space: nowrap;
  }
 
+
+
       .carousel-caption{  
       text-align: center;  
       width: 300px;  
@@ -82,9 +84,32 @@ p{
       @media screen and (max-width: 600px) {
         .carousel-caption{ 
       left:20%;
-      top:35%;
+      top:5%;
         }
       }
+
+
+      #header-carousel {
+  height: 240px;
+}#c1 {
+  height: 1000px;
+  background-image: url(../static/barber2.jpeg);
+  background-position: center center;
+  background-size: cover;
+
+}#c2 {
+  height: 1000px;
+  background-image: url(../static/carpenter.jpg);
+  background-position: center center;
+  background-size: cover;
+}#c3 {
+  height: 1000px;
+  background-image: url(../static/housd.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+
       
           </style>
     
@@ -94,7 +119,7 @@ p{
   
 
     
- <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+ <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel" >
 
   <div class="carousel-inner">
     
@@ -114,37 +139,33 @@ p{
     <form action="/employer" method="post">
       <button type="submit" name="employer" value="employer" class="btn btn-dark" id="btn" >EMPLOYER</button></a>
     </form>
-    </br>
-  </br>
 </br>
 <form action="/employee" method="post">
       <button type="submit" name="employee" value="Employee" class="btn btn-dark" id="btn" >EMPLOYEE</button></a>
     </form>
 
-  <h1 style="color: black">News Feed</h1>
     <div id="news_iframe_scroll card ch col-lg-6 col-md-12" >
+    	<h1 style="color: black">News Feed</h1>
 <div class="news_scroll-title" >
 Government Schemes and Notifications<br>
 </div id="frame">
-<iframe name="NewsIFrame" src="static/news_scroll.html" frameborder="30" scrolling="no"></iframe>
+<iframe name="NewsIFrame" src="static/news_scroll.html" frameborder="30" scrolling="no" ></iframe>
 </div>
-
-
-    </div>
+</div>
     
      
   
-    <div class="carousel-item active" data-interval="50">
-      <img src="../static/barber2.jpeg" class="d-block w-100" alt="placeholder 960">
+    <div id="c3" class="carousel-item active" data-interval="50">
+      <!-- <img src="../static/barber2.jpeg" class="d-block w-100" alt="placeholder 960"> -->
       
      
       
     </div>
-    <div class="carousel-item" data-interval="50">
-      <img src="../static/carpenter.jpg" class="d-block w-100" alt="placeholder 960">
+    <div id="c1" class="carousel-item" data-interval="50">
+     <!--  <img src="../static/carpenter.jpg" class="d-block w-100" alt="placeholder 960"> -->
     </div>
-    <div class="carousel-item" data-interval="50">
-      <img src="../static/housd.jpg" class="d-block w-100" alt="placeholder 960">
+    <div id="c2" class="carousel-item" data-interval="50">
+     <!--  <img src="../static/housd.jpg" class="d-block w-100" alt="placeholder 960"> -->
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
