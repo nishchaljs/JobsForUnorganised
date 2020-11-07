@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>News</title>
+
+<base target="_parent">
+
+<link rel="stylesheet" href="news_scroll.css" type="text/css">
+<style >
+	div{
+		 background-color: lightblue;
+	}
+</style>
+
+</head>
+
+<body class="news-scroll" onMouseover="scrollspeed=0" onMouseout="scrollspeed=current" OnLoad="NewsScrollStart();">
+
+
+<!-- START NEWS FEED -->
+<div id="NewsDiv">
+<div class="scroll-text-if">
+
+<!-- SCROLLER CONTENT STARTS HERE -->
+
+
+
+
+
+
+<span class="scroll-title-if">
+Advertisement for inviting applications for Special coaching<br>
+</span>
+
+<a href="https://www.ncs.gov.in/Documents/Advertisement%20Special%20Coaching%202020.pdf">Click here</a>.
+
+<br><br>
+
+<span class="scroll-title-if">
+Information on Inviting applications for Special Coaching to SC/ST Job seekers<br>
+</span>
+<a href="https://www.ncs.gov.in/Documents/Advertisement%202020.pdf">Click here</a>.
+
+<br><br>
+
+
+
+<span class="scroll-title-if">
+Now Video Profile
+Functionality for Jobseekers on NCS
+<br>
+</span>
+<a href="https://www.ncs.gov.in/Documents/Video%20Profile_Hiremee.pdf">Click here</a>.
+
+<br><br>
+
+
+
+<span class="scroll-title-if">
+Success Story Repository​<br>
+</span>
+
+<a href="https://www.ncs.gov.in/_layouts/15/ncsp/successstories.aspx">Click here</a>.
+
+<br><br>
+
+<span class="scroll-title-if">
+
+Series of Online Refresher Training Programs by NICS, Noida<br>
+</span>
+<a href="https://www.ncs.gov.in/Documents/Upcomining%20Programme%20of%20Nov%2020-English.pdf">Click here</a>.
+
+<br><br>
+
+
+
+
+
+
+<!-- END SCROLLER CONTENT -->
+
+</div>
+</div>
+<!-- END NEWS FEED -->
+
+
+
+
+<!-- YOU DO NOT NEED TO EDIT BELOW THIS LINE -->
+
+<script type="text/javascript">
+
+
+var startdelay 		= 2; 		// START SCROLLING DELAY IN SECONDS
+var scrollspeed		= 1.1;		// ADJUST SCROLL SPEED
+var scrollwind		= 1;		// FRAME START ADJUST
+var speedjump		= 30;		// ADJUST SCROLL JUMPING = RANGE 20 TO 40
+var nextdelay		= 0; 		// SECOND SCROLL DELAY IN SECONDS 0 = QUICKEST
+var topspace		= "2px";	// TOP SPACING FIRST TIME SCROLLING
+var frameheight		= 176;		// IF YOU RESIZE THE CSS HEIGHT, EDIT THIS HEIGHT TO MATCH
+
+
+current = (scrollspeed);
+
+
+function HeightData(){
+AreaHeight=dataobj.offsetHeight
+if (AreaHeight===0){
+setTimeout("HeightData()",( startdelay * 1000 ))
+}
+else {
+ScrollNewsDiv()
+}}
+
+function NewsScrollStart(){
+dataobj=document.all? document.all.NewsDiv : document.getElementById("NewsDiv")
+dataobj.style.top=topspace
+setTimeout("HeightData()",( startdelay * 1000 ))
+}
+
+function ScrollNewsDiv(){
+dataobj.style.top=scrollwind+'px';
+scrollwind-=scrollspeed;
+if (parseInt(dataobj.style.top)<AreaHeight*(-1)) {
+dataobj.style.top=frameheight+'px';
+scrollwind=frameheight;
+setTimeout("ScrollNewsDiv()",( nextdelay * 1000 ))
+}
+else {
+setTimeout("ScrollNewsDiv()",speedjump)
+}}
+
+
+</script>
+
+
+</body>
+</html>
