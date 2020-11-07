@@ -14,7 +14,16 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-
+.registerbtn {
+  background-color: #2e302e;
+  color:rgb(255, 255, 255);
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
 .flip-card {
   background-color: transparent;
   width: 250px;
@@ -51,7 +60,7 @@ body {
 }
 
 .flip-card-back {
-  background-color: #2980b9;
+  background-color: #000000;
   color: white;
   transform: rotateY(180deg);
 }
@@ -69,27 +78,31 @@ body {
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
           
 <h1>House Help</h1>
-    {% for task_id in tasks %}
-    
-       <div class="flip-card" >
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="static/avatar.png" alt="Avatar" style="width:300px;height:300px;">
-          </div>
-          <div class="flip-card-back">
-            <h1> {{task_id.name}}</h1> 
-            <h2>{{task_id.City}}</h2> 
-            <h3>{{task_id.Phoneno}}</h3> 
-            <h3>{{task_id.Experience}}</h3>
-          </div>
+<div class="row">
+  {% for task_id in tasks %}
+  <div class="col-md-3">
+     <div class="flip-card" >
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="static/avatar.png" alt="Avatar" style="width:300px;height:300px;">
         </div>
+        <div class="flip-card-back">
+          <h1> {{task_id.name}}</h1> 
+          <h2>{{task_id.City}}</h2> 
+          <h3>{{task_id.Phoneno}}</h3> 
+          <h3>{{task_id.Experience}}</h3>
+          <a href="https://wa.me/91{{task_id.Phoneno}}?text=I have a requirment for a HouseHelp in {{task_id.City}}. Please do contact me. ">Send Message</a>
         </div>
-        <a href="https://wa.me/91{{task_id.Phoneno}}?text=I have a requirment for a HouseHelp in {{task_id.City}}. Please do contact me. ">Send Message</a>
-    </br>
+        
+      </div>
+      </div>
+      
+  </br>
+</div>
     {% endfor %}
- 
+ </div>
     <form action="/test6" method="POST">
-        <button type="submit"  name="househelpjob" value="Househelpjob">Provide a Job Description</button>
+        <button type="submit" class="registerbtn"  name="househelpjob" value="Househelpjob">Provide a Job Description</button>
     </form>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>

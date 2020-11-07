@@ -14,7 +14,16 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-
+.registerbtn {
+  background-color: #2e302e;
+  color:rgb(255, 255, 255);
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
 .flip-card {
   background-color: transparent;
   width: 250px;
@@ -51,7 +60,7 @@ body {
 }
 
 .flip-card-back {
-  background-color: #2980b9;
+  background-color: #000000;
   color: white;
   transform: rotateY(180deg);
 }
@@ -69,26 +78,31 @@ body {
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
           
 <h1>Carpenter</h1>
-    {% for task_id in tasks %}
-    
-       <div class="flip-card" >
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="static/avatar.png" alt="Avatar" style="width:300px;height:300px;">
-          </div>
-          <div class="flip-card-back">
-            <h1> {{task_id.name}}</h1> 
-            <h2>{{task_id.City}}</h2> 
-            <h3>{{task_id.Phoneno}}</h3> 
-            <h3>{{task_id.Experience}}</h3>
-          </div>
+<div class="row">
+  {% for task_id in tasks %}
+  <div class="col-md-3">
+     <div class="flip-card" >
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="static/avatar.png" alt="Avatar" style="width:300px;height:300px;">
         </div>
+        <div class="flip-card-back">
+          <h1> {{task_id.name}}</h1> 
+          <h2>{{task_id.City}}</h2> 
+          <h3>{{task_id.Phoneno}}</h3> 
+          <h3>{{task_id.Experience}}</h3>
+          <a href="https://wa.me/91{{task_id.Phoneno}}?text=I have a requirment for a Carpenter in {{task_id.City}}. Please do contact me. ">Send Message</a>
         </div>
-        <a href="https://wa.me/91{{task_id.Phoneno}}?text=I have a requirment for a Carpenter in {{task_id.City}}. Please do contact me. ">Send Message</a>    </br>
+        
+      </div>
+      </div>
+      
+  </br>
+</div>
     {% endfor %}
- 
+ </div>
     <form action="/test4" method="POST">
-        <button type="submit"  name="carpenterjob" value="Carpenterjob">Provide a Job Description</button>
+        <button type="submit"  name="carpenterjob" class="registerbtn" value="Carpenterjob">Provide a Job Description</button>
     </form>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -101,101 +115,3 @@ body {
 </html>
 
 
- <!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <title>html-css-flipping-cards</title>
-        <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="static/style2.css">
-
-    </head>
-    <style>
-html { 
-    background: url(static/form.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-</style> 
-    <body>
-        <section class="flipping-cards">
-        </br>
-    </br>
-</br>
-        <h1>Carpenter</h1>
-        {% for task_id in tasks %}
-        <div class="flipping-card-wrapper">
-            <div class="flipping-card-item-wrapper">
-                <div class="flipping-card-item-side flipping-card-item-side-front">
-                    <img src="static/avatar.png" alt="" class="flipping-card-item-img">
-                </div>
-                <div class="flipping-card-item-side flipping-card-item-side-back">
-                    <div class="flipping-card-back-wrapper">
-                        <p>Hello I am learning how to create flipping cards using HTML & CSS, will you mind joining me?</p>
-                        <h1> {{task_id.name}}</h1> 
-                <h2>{{task_id.City}}</h2> 
-                <h3>{{task_id.Phoneno}}</h3> 
-                <h3>{{task_id.Experience}}</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-    </section>
-    </body>
-</html> -->
-
-<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <title>html-css-flipping-cards</title>
-        <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="static/style2.css">
-
-    
-    <style>
-
-
-html { 
-    background: url(../static/form.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-</style>
-</head>
-    <body>
-        {% for task_id in tasks %}
-    <section class="flipping-cards">
-       
-        <div class="flipping-card-wrapper">
-           
-            <div class="flipping-card-item-wrapper">
-                <div class="flipping-card-item-side flipping-card-item-side-front">
-                    <img src="/static/avatar.png" alt="" class="flipping-card-item-img">
-                </div>
-                <div class="flipping-card-item-side flipping-card-item-side-back">
-                    <div class="flipping-card-back-wrapper">
-                        <p>Hello I am learning how to create flipping cards using HTML & CSS, will you mind joining me?</p>
-                        <h1> {{task_id.name}}</h1> 
-                <h2>{{task_id.City}}</h2> 
-                <h3>{{task_id.Phoneno}}</h3> 
-                <h3>{{task_id.Experience}}</h3>
-                    </div>
-                </div>
-            </div>
-                
-            </div>
-
-            
-            
-        
-    </section>
-    {% endfor %} 
-
-    </body>
-</html> -->
